@@ -25,7 +25,7 @@ const SummaryForm = () => {
           onClick={onCheckboxClick}
         />
         <label htmlFor="agree" className="form__checkbox-label">
-          I agree to
+          I agree to&nbsp;
           <span
             className="terms-and-conditions"
             onMouseEnter={onTermsAndConditionsHover}

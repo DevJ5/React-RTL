@@ -39,3 +39,11 @@
   border-width: 10px 10px 10px 0;
   border-color: transparent black transparent transparent;
 }
+
+.options {
+  display: flex;
+}
+
+.scoop-option__img {
+  width: 70%;
+}
