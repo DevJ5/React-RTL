@@ -1,0 +1,40 @@
+.main {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.counter {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+  padding: 3rem;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.counter__header {
+  margin-bottom: 2rem;
+  text-decoration: underline;
+}
+
+.counter__count {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.counter__add-btn,
+.counter__subtract-btn {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.counter__input {
+  height: 3rem;
+  margin: 0 1rem;
+  padding: 0 1rem;
+  text-align: center;
+}
