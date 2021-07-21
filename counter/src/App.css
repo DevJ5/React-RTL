@@ -25,6 +25,13 @@
   margin-bottom: 2rem;
 }
 
+.counter__count--green {
+  color: green;
+}
+.counter__count--red {
+  color: red;
+}
+
 .counter__add-btn,
 .counter__subtract-btn {
   width: 3rem;
