@@ -6,14 +6,12 @@ import OrderSummary from './components/summary/OrderSummary';
 function App() {
   return (
     <div className="main">
-      <div className="row">
-        <BrowserRouter>
-          <Switch>
-            <Route path="/" exact component={OrderEntry}></Route>
-            <Route path="/summary" component={OrderSummary}></Route>
-          </Switch>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={OrderEntry}></Route>
+          <Route path="/summary" component={OrderSummary}></Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

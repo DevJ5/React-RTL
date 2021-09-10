@@ -28,8 +28,8 @@ const Options = ({ optionType }) => {
   if (error) return <AlertBanner />;
 
   return (
-    <div>
-      <h3>Scoops</h3>
+    <div className={optionType}>
+      <h3>{optionType}</h3>
       <p>$2.00 each</p>
       <div className="options">{optionItems}</div>
     </div>

@@ -3,14 +3,17 @@ import Options from './Options';
 
 const OrderEntry = () => {
   return (
-    <div>
+    <React.Fragment>
       <h1>Design Your Sundae!</h1>
-      <Options optionType="scoops"></Options>
-      <Options optionType="toppings"></Options>
 
-      <h3>Grand total: $10.50</h3>
-      <button>Order Sundae!</button>
-    </div>
+      <div className="row-flex">
+        <Options optionType="scoops"></Options>
+        <Options optionType="toppings"></Options>
+
+        <h3>Grand total: $10.50</h3>
+        <button>Order Sundae!</button>
+      </div>
+    </React.Fragment>
   );
 };
 

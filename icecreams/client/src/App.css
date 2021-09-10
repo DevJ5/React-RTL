@@ -1,3 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-size: 1.6rem;
+  margin: 2rem;
+}
+
 .main {
   margin-top: 100px;
 }
@@ -42,8 +60,15 @@
 
 .options {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.scoop-option__img {
-  width: 70%;
+.options div {
+  flex: 0 1 22%;
+}
+
+.scoop-option__img,
+.topping-option__img {
+  width: 50%;
 }

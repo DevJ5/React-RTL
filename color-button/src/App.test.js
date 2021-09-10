@@ -9,11 +9,11 @@ test('button has correct initial color', () => {
 
   fireEvent.click(colorButton);
   expect(colorButton).toHaveStyle({ backgroundColor: 'MidnightBlue' });
-  expect(colorButton.textContent).toBe('Change to Lime Green');
+  expect(colorButton).toHaveTextContent('Change to Lime Green');
 
   fireEvent.click(colorButton);
   expect(colorButton).toHaveStyle({ backgroundColor: 'LimeGreen' });
-  expect(colorButton.textContent).toBe('Change to Orange Red');
+  expect(colorButton).toHaveTextContent('Change to Orange Red');
 });
 
 test('initial checkbox conditions', () => {
