@@ -50,6 +50,7 @@ test('change value of input works correctly', () => {
   const inputEl = counterComponent.getByTestId('counter__input');
   userEvent.clear(inputEl);
   userEvent.type(inputEl, '2');
+  // Fire event is the old way to do it, use userEvent.
   // fireEvent.change(inputEl, {
   //   target: { value: '2' },
   // });
