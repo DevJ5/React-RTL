@@ -1,74 +1,38 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: inherit;
+.App {
+  text-align: center;
 }
 
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-  font-size: 1.6rem;
-  margin: 2rem;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-.main {
-  margin-top: 100px;
-}
-
-.row {
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
-.order-summary__form {
-  width: 75%;
-}
-
-.order-summary__form .form__checkbox-group {
-  position: relative;
-}
-
-.terms-and-conditions {
-  text-decoration: underline;
-  color: blue;
-}
-
-.popover {
-  position: absolute;
-  top: -8px;
-  left: 270px;
-  background: black;
-  color: white;
-  padding: 10px;
-}
-
-.popover:before {
-  position: absolute;
-  z-index: -1;
-  content: '';
-  left: -10px;
-  top: calc(50% - 10px);
-  border-style: solid;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent black transparent transparent;
-}
-
-.options {
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.options div {
-  flex: 0 1 22%;
+.App-link {
+  color: #61dafb;
 }
 
-.scoop-option__img,
-.topping-option__img {
-  width: 50%;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

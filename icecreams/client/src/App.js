@@ -1,19 +1,33 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import './App.css';
-import OrderEntry from './components/entry/OrderEntry';
-import OrderSummary from './components/summary/OrderSummary';
+import { useState } from 'react';
+import Container from 'react-bootstrap/Container';
 
-function App() {
+import OrderConfirmation from './pages/confirmation/OrderConfirmation';
+import OrderEntry from './pages/entry/OrderEntry';
+import OrderSummary from './pages/summary/OrderSummary';
+
+import { OrderDetailsProvider } from './contexts/OrderDetails';
+
+export default function App() {
+  // orderPhase needs to be 'inProgress', 'review' or 'completed'
+  const [orderPhase, setOrderPhase] = useState('inProgress');
+
+  let Component = OrderEntry; // default to order page
+  switch (orderPhase) {
+    case 'inProgress':
+      Component = OrderEntry;
+      break;
+    case 'review':
+      Component = OrderSummary;
+      break;
+    case 'completed':
+      Component = OrderConfirmation;
+      break;
+    default:
+  }
+
   return (
-    <div className="main">
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" exact component={OrderEntry}></Route>
-          <Route path="/summary" component={OrderSummary}></Route>
-        </Switch>
-      </BrowserRouter>
-    </div>
+    <OrderDetailsProvider>
+      <Container>{<Component setOrderPhase={setOrderPhase} />}</Container>
+    </OrderDetailsProvider>
   );
 }
-
-export default App;
